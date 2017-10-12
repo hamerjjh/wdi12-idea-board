@@ -11,18 +11,15 @@ class App extends Component {
       <Router>
         <div>
         <div>
-          <Link to="/">Home</Link>
-          <br />
-          <Link to="/login">Login</Link>
-          <br />
-          <Link to="/user">User</Link>
-          <br />
+          <Link to="/">Home</Link><br />
+          <Link to="/login">Login</Link><br />
+          <Link to="/user">User</Link>  <br />
           </div>
         <div>
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/login" component={LoginPage} />
-              <Route exact path="/user" component={IdeaPage} />
+              <Route exact path="/idea/:userId" component={IdeaPage} />
             </Switch>  
           </div>
           </div>

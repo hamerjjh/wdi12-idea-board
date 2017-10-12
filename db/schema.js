@@ -19,7 +19,7 @@ const IdeasSchema = new Schema({
 })
 
 const UserSchema = new Schema({
-    usnerName: {
+    userName: {
         type: String,
     },
     password: {
