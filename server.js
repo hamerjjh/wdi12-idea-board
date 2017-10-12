@@ -21,13 +21,14 @@ connection.on('error', (err) => {
   }) 
 
 //Inject middleware
-app.use(bodyParser.json());
+app.use(express.static(`${__dirname}/client/build`))
+app.use(bodyParser.json())
+
 
 //Index
 app.get('/', (req,res) => {
-  res.send('Hello world!')
+  res.sendFile(__dirname + '/client/build/index.html')
 })
-
 
 //Set the app to listen on a specific port
 const PORT = process.env.PORT || 3001
